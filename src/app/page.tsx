@@ -16,7 +16,11 @@ export default function Home() {
       </main>
       <footer className="py-8">
         <div className="container mx-auto max-w-4xl px-4 flex justify-center">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            href="?utm_source=FB&utm_campaign={{campaign.name}}|{{campaign.id}}&utm_medium={{adset.name}}|{{adset.id}}&utm_content={{ad.name}}|{{ad.id}}&utm_term={{placement}}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white font-bold">
               <Send className="mr-2 h-5 w-5" />
               Grupo Vip Telegram
