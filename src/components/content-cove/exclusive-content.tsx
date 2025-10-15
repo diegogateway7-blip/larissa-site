@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
-import { Plus, X, Video } from 'lucide-react';
+import { Plus, X, Video, Camera } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -194,16 +194,18 @@ export function ExclusiveContent() {
   };
 
   return (
-    <section className="mt-12">
-      <h2 className="text-2xl font-bold mb-4 font-headline">Meus Packs Exclusivos</h2>
+    <section className="mt-8">
       <Tabs defaultValue="all" className="w-full">
-        <TabsList className="grid w-full grid-cols-3 md:w-auto md:inline-flex mb-2">
-          <TabsTrigger value="all">Todos</TabsTrigger>
-          <TabsTrigger value="photos">📸 Fotos</TabsTrigger>
-          <TabsTrigger value="videos">🎥 Vídeos</TabsTrigger>
-        </TabsList>
-        <div className="bg-card p-4 sm:p-6 rounded-xl shadow-lg">
-          <h3 className="text-lg font-semibold mb-4">Conteúdo exclusivo</h3>
+        <div className="flex justify-between items-center mb-4">
+            <h2 className="text-2xl font-bold font-headline">Meus Packs Exclusivos</h2>
+            <TabsList className="grid grid-cols-3 md:w-auto md:inline-flex mb-0 bg-gray-100 rounded-lg">
+                <TabsTrigger value="all" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white">Todos</TabsTrigger>
+                <TabsTrigger value="photos" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white"><Camera className="mr-2 h-4 w-4"/>Fotos</TabsTrigger>
+                <TabsTrigger value="videos" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white"><Video className="mr-2 h-4 w-4"/>Vídeos</TabsTrigger>
+            </TabsList>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-4 text-muted-foreground">Conteúdo exclusivo básico</h3>
           <TabsContent value="all" className="mt-0">
             <MediaGrid items={mediaItems} showMore onItemClick={handleItemClick} />
           </TabsContent>
@@ -219,7 +221,7 @@ export function ExclusiveContent() {
         <DialogContent className="max-w-3xl p-0">
           <DialogHeader>
             <DialogTitle className="sr-only">Visualizar Mídia</DialogTitle>
-             <DialogClose className="absolute right-2 top-2 z-10">
+             <DialogClose className="absolute right-2 top-2 z-10 bg-black/20 text-white rounded-full">
                 <X className="h-6 w-6" />
              </DialogClose>
           </DialogHeader>
