@@ -24,7 +24,13 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'rcsqvgifkuaohukogerv.supabase.co',
+        hostname: 'storage.googleapis.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'raspatudopix.com.br',
         port: '',
         pathname: '/**',
       }
