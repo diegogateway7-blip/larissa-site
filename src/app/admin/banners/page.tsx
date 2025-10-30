@@ -89,7 +89,6 @@ export default function AdminBannersPage() {
             <span className="text-xs px-2 py-1 rounded bg-gray-200 ml-2">Ordem: {b.ordem}</span>
             <span className={b.ativo ? "ml-2 text-green-700" : "ml-2 text-gray-400"}>{b.ativo ? 'Ativo' : 'Inativo'}</span>
             <button onClick={()=>handleToggle(b.id, !b.ativo)} className="ml-2 px-3 py-1 rounded bg-gray-300 text-xs hover:bg-gray-400">{b.ativo?'Desativar':'Ativar'}</button>
-           {/* Poderia adicionar remover e editar aqui */}
           </li>
         ))}
       </ul>

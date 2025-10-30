@@ -22,7 +22,6 @@ export default function AdminLoginPage() {
         setLoading(false);
         return;
       }
-      // Armazena flag local de sessão (para proteger rotas client)
       localStorage.setItem("admin-auth", "1");
       router.push("/admin");
     } catch (e) {

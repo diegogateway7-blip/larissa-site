@@ -20,16 +20,12 @@ export default function AdminDashboardPage() {
     setErro(null);
     const supabase = getSupabaseClient();
     try {
-      // Contagem modelos
       let { count: mCount } = await supabase.from("models").select("id", { count: "exact", head: true });
       setModelosCount(mCount ?? 0);
-      // Contagem mídias
       let { count: gCount } = await supabase.from("media").select("id", { count: "exact", head: true });
       setMediaCount(gCount ?? 0);
-      // Últimos modelos
       let { data: ultModelData } = await supabase.from("models").select("*").order("id", { ascending: false }).limit(5);
       setUltimosModelos(ultModelData || []);
-      // Últimas mídias
       let { data: ultMediaData } = await supabase.from("media").select("*, models(nome)").order("created_at", { ascending: false }).limit(5);
       setUltimasMidias(ultMediaData || []);
     } catch(e: any) {
