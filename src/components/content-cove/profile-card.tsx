@@ -35,7 +35,6 @@ export function ProfileCard() {
           className="object-cover w-full h-full"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         <div className="absolute bottom-0 left-6 translate-y-1/2">
           <Avatar className="h-28 w-28 border-4 border-card">
             <AvatarImage 
