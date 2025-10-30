@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from 'react';
 import AdminSidebar from '@/components/ui/admin-sidebar';
 import { useRouter } from 'next/navigation';
