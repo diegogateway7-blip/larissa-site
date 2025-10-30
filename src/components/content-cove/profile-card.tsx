@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { ProfileHeader } from '@/components/content-cove/profile-header';
 import placeholderImages from '@/lib/placeholder-images.json';
 
 const VerifiedIcon = () => (
@@ -23,6 +24,7 @@ export function ProfileCard() {
   return (
     <div className="bg-card">
       <div className="relative h-48 md:h-64 w-full">
+        <ProfileHeader />
         <Image
           src={coverImage.url}
           alt={coverImage.alt}
