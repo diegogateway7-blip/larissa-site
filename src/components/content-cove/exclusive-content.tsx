@@ -84,6 +84,7 @@ function MediaGrid({
               data-ai-hint={item.hint}
               width={400}
               height={400}
+              unoptimized
               className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
             />
           ) : (
@@ -131,6 +132,7 @@ function Thumb({
             alt={`Thumbnail ${item.id}`}
             width={80}
             height={80}
+            unoptimized
             className="object-cover w-full h-full"
           />
         ) : (
@@ -256,6 +258,7 @@ export function ExclusiveContent() {
                           src={item.url} 
                           alt={`Media ${item.id}`} 
                           fill
+                          unoptimized
                           className="object-contain"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 800px"
                           priority={index === selectedMediaIndex}
