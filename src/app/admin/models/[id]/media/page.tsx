@@ -4,7 +4,7 @@ import { getSupabaseClient } from "@/lib/supabaseClient";
 import { useParams } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from "@/components/ui/dialog";
-import { format } from "date-fns"
+import { format } from "date-fns";
 
 const PAGE_SIZE = 12;
 
@@ -25,7 +25,6 @@ export default function AdminModelMediaPage() {
   const [total, setTotal] = useState(0);
   const [pendingDeleteId, setPendingDeleteId] = useState<string|null>(null);
   const [publicarEm, setPublicarEm] = useState(() => {
-    // Default: agora, no formato yyyy-MM-ddTHH:mm (input[type=datetime-local])
     const now = new Date();
     now.setSeconds(0,0);
     return now.toISOString().slice(0,16);
@@ -72,7 +71,6 @@ export default function AdminModelMediaPage() {
       const { data, error } = await supabase.storage.from("media").upload(filename, file);
       if (error) throw error;
       const publicUrl = supabase.storage.from("media").getPublicUrl(data.path).data.publicUrl;
-      // Salvar referência no banco
       const { error: insertError } = await supabase.from("media").insert([
         {
           modelo_id: modelId,
