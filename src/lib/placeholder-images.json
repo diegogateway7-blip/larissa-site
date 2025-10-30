@@ -1,14 +1,14 @@
 {
   "profile": {
     "coverImage": {
-      "url": "https://raspatudopix.com.br/imagens/1.jpg",
+      "url": "https://raspatudopix.com.br/imagens/60.jpg",
       "alt": "Cover image for Larissa Santos",
       "hint": "woman posing",
       "width": 1200,
       "height": 400
     },
     "profileAvatar": {
-      "url": "https://raspatudopix.com.br/imagens/35.jpg",
+      "url": "https://raspatudopix.com.br/imagens/47.jpg",
       "alt": "Larissa Santos",
       "hint": "woman portrait"
     }
@@ -274,7 +274,7 @@
     },
     {
       "id": 42,
-      "url": "https://raspatudopix.com.br/imagens/60.jpg",
+      "url": "https://raspatudopix.com.br/imagens/1.jpg",
       "type": "photo",
       "hint": "woman posing"
     },
@@ -334,7 +334,7 @@
     },
     {
       "id": 29,
-      "url": "https://raspatudopix.com.br/imagens/47.jpg",
+      "url": "https://raspatudopix.com.br/imagens/35.jpg",
       "type": "photo",
       "hint": "woman posing"
     },
