@@ -7,7 +7,7 @@ export function ProfileHeader() {
       <nav className="container mx-auto max-w-4xl px-4">
         <div className="flex justify-between items-center h-16">
           <a href="#" className="text-2xl font-bold text-foreground font-headline">
-            privacy<span className="text-primary">.</span>
+            SigiloVip<span className="text-primary">.</span>
           </a>
           <Button variant="ghost" size="icon" className="text-foreground hover:bg-muted/50">
             <Globe className="h-6 w-6" />
